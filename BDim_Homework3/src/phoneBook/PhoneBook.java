@@ -20,9 +20,9 @@ public class PhoneBook {
         this.book = new TreeMap<>();
     }
 
-    public void add(String LastName, String number){
-        book.put(LastName, book.getOrDefault(LastName, new ArrayList<>()));
-        book.get(LastName).add(number);
+    public void add(String lastName, String number){
+        book.put(lastName, book.getOrDefault(lastName, new ArrayList<>()));
+        book.get(lastName).add(number);
     }
 
     public void get(String lastName){
