@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.MyClient"
+            prefHeight="400" prefWidth="400">
+    <HBox fx:id="authBox" managed="true" visible="true">
+        <TextField fx:id="loginField" HBox.hgrow="ALWAYS" promptText="Логин" onAction="#toPassword"/>
+        <PasswordField fx:id="passwordField" HBox.hgrow="ALWAYS" promptText="Пароль" onAction="#authorization"/>
+        <Button text="Войти" onAction="#authorization" prefWidth="120"/>
+        <Button text="Регистрация" onAction="#regisration" prefWidth="120"/>
+    </HBox>
+    <HBox fx:id="areaBox" VBox.vgrow="ALWAYS">
+        <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS"/>
+        <ListView fx:id="clientsList" managed="false" visible="false" onMouseClicked="#clickItem"/>
+    </HBox>
+    <HBox fx:id="sendBox" managed="false" visible="false">
+        <TextField fx:id="sendField" HBox.hgrow="ALWAYS" onAction="#send"/>
+        <Button text="Отправить" onAction="#send" prefWidth="85"/>
+    </HBox>
+</VBox>
